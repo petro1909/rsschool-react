@@ -1,3 +1,4 @@
+/* c8 ignore start */
 export type Product = {
   id: number;
   title: string;
@@ -11,10 +12,12 @@ export type Product = {
   thumbnail: string;
   images: Array<string>;
 };
-
+/* c8 ignore stop */
+/* c8 ignore start */
 export type ProductJsonResult = {
   products: Array<Product>;
   total: number;
   skip: number;
-  limit: 100;
+  limit: number;
 };
+/* c8 ignore stop */
