@@ -20,6 +20,6 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./src",
   },
-  "include": ["vite.config.ts", "src", "styled.d.ts"],
+  "include": ["src", "styled.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
