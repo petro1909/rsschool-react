@@ -7,7 +7,5 @@ export function getValueByKeyFromLocalStorage(key: string): string {
 }
 
 export function setValueByKeyToLocalStorage(key: string, value: string): void {
-  console.log(key);
-  console.log(value);
   localStorage.setItem(key, value);
 }
