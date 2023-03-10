@@ -1,9 +1,10 @@
-export default async function getItemList(path: string) {
+export default async function getFetchJson(path: string) {
   let fetchResult;
   try {
     const result = await fetch(path);
-    if (!result.ok) {
-      console.error(result.status);
+    if (!result || !result.ok) {
+      console.error(result);
+      return [];
     }
     fetchResult = await result.json();
   } catch (e: unknown) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import getItemList from '../../service/fetchService';
+import getFetchJson from '../../service/fetchService';
 import { Product, ProductJsonResult } from '../../types/product';
 import Card from '../card/card';
 import './cards.css';
@@ -16,7 +16,7 @@ export default class Cards extends React.Component<Props, CardsState> {
     this.state = { cards: [] };
   }
   async componentDidMount(): Promise<void> {
-    const fetchedProducts = (await getItemList(
+    const fetchedProducts = (await getFetchJson(
       'https://dummyjson.com/products?limit=20'
     )) as ProductJsonResult | null;
     if (!fetchedProducts) {
