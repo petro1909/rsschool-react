@@ -16,3 +16,11 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.active {
+  color: #f82424;
+}
+
+.active:hover {
+  color: #ac0000;
+}
