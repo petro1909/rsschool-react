@@ -16,9 +16,7 @@ export default class Cards extends React.Component<Props, CardsState> {
     this.state = { cards: [] };
   }
   async componentDidMount(): Promise<void> {
-    const fetchedProducts = (await getFetchJson(
-      'https://dummyjson.com/products?limit=20'
-    )) as ProductJsonResult | null;
+    const fetchedProducts = (await getFetchJson('https://dummyjson.com/products?limit=20')) as ProductJsonResult | null;
     if (!fetchedProducts) {
       this.setState({ cards: [] });
     } else {
@@ -29,9 +27,9 @@ export default class Cards extends React.Component<Props, CardsState> {
   render() {
     return (
       <section className="cards-wrapper">
-        {this.state.cards.map((product) => {
-          return <Card key={product.id} item={product} />;
-        })}
+        {this.state.cards.map((product) => (
+          <Card key={product.id} item={product} />
+        ))}
       </section>
     );
   }
