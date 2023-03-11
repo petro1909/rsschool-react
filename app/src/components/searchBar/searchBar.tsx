@@ -1,10 +1,7 @@
 import React from 'react';
 import './searchBar.css';
 import searchIcon from '../../assets/search.svg';
-import {
-  getValueByKeyFromLocalStorage,
-  setValueByKeyToLocalStorage,
-} from '../../service/storageService';
+import { getValueByKeyFromLocalStorage, setValueByKeyToLocalStorage } from '../../service/storageService';
 type Props = {
   value?: string;
 };
@@ -28,13 +25,7 @@ export default class SearchBar extends React.Component<Props, SearchBarState> {
     return (
       <section className="search-wrapper">
         <div className="search">
-          <input
-            className="search__input"
-            type="text"
-            placeholder="search"
-            value={this.state.text}
-            onChange={(e) => this.onChange(e)}
-          ></input>
+          <input className="search__input" type="text" placeholder="search" value={this.state.text} onChange={(e) => this.onChange(e)}></input>
           <button className="search__submit">
             <img className="search__image" src={searchIcon}></img>
           </button>
