@@ -1,18 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './header.css';
+
+type linkType = {
+  isActive: boolean;
+};
 
 export default class Header extends React.Component {
   render() {
+    const setActive = (link: linkType) => (link.isActive ? 'active' : '');
     return (
       <header className="header">
         <nav>
           <ul>
             <li>
-              <Link to="/">Main</Link>
+              <NavLink to="/" className={setActive}>
+                Main
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">About us</Link>
+              <NavLink to="/about" className={setActive}>
+                About us
+              </NavLink>
             </li>
           </ul>
         </nav>
