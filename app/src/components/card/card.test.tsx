@@ -23,6 +23,16 @@ describe('Card component', () => {
   it('Render card component', () => {
     render(<Card item={testProduct} />);
     const titleElemnet = screen.getByText(`${testProduct.title}`);
-    expect(titleElemnet).toBeTruthy();
+    expect(titleElemnet).toBeInTheDocument();
+
+    const brandElemnet = screen.getByText(`${testProduct.brand}`);
+    expect(brandElemnet).toBeInTheDocument();
+
+    const categoryElemnet = screen.getByText(`${testProduct.category}`);
+    expect(categoryElemnet).toBeInTheDocument();
+
+    const priceRegex = new RegExp(`${testProduct.price}`);
+    const priceElemnet = screen.getByText(priceRegex);
+    expect(priceElemnet).toBeInTheDocument();
   });
 });
