@@ -19,7 +19,7 @@ export default class Card extends React.Component<Props> {
             <h3 className="product__title">{this.props.item.title}</h3>
             <p className="product__brand">{this.props.item.brand}</p>
             <p className="product__cartegory">{this.props.item.category}</p>
-            <p className="product__price">price - {this.props.item.price}€</p>
+            <p className="product__price">price - {this.props.item.price} €</p>
           </div>
         </div>
       </section>
