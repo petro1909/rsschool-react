@@ -2,9 +2,8 @@ import React from 'react';
 import './searchBar.css';
 import searchIcon from '../../assets/search.svg';
 import { getValueByKeyFromLocalStorage, setValueByKeyToLocalStorage } from '../../service/storageService';
-type Props = {
-  value?: string;
-};
+import { Props } from 'types/props';
+
 type SearchBarState = {
   storageKey: string;
   text: string;

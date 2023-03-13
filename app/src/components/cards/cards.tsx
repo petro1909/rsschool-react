@@ -1,11 +1,10 @@
 import React from 'react';
+import { Props } from 'types/props';
 import getFetchJson from '../../service/fetchService';
 import { Product, ProductJsonResult } from '../../types/product';
 import Card from '../card/card';
 import './cards.css';
-type Props = {
-  value?: string;
-};
+
 type CardsState = {
   cards: Product[];
 };
