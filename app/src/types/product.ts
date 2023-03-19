@@ -1,16 +1,16 @@
 /* c8 ignore start */
 export type Product = {
-  id: number;
+  id?: number;
   title: string;
   description: string;
   price: number;
   discountPercentage: number;
-  rating: number;
+  rating?: number;
   stock: number;
   brand: string;
   category: string;
   thumbnail: string;
-  images: Array<string>;
+  images?: Array<string>;
 };
 /* c8 ignore stop */
 /* c8 ignore start */
