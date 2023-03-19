@@ -6,11 +6,19 @@ type linkType = {
   isActive: boolean;
 };
 
-export default class Header extends React.Component {
+type HeaderContent = {
+  title: string;
+};
+
+export default class Header extends React.Component<HeaderContent> {
+  constructor(props: HeaderContent) {
+    super(props);
+  }
   render() {
     const setActive = (link: linkType) => (link.isActive ? 'active' : '');
     return (
       <header className="header">
+        <h1>{this.props.title}</h1>
         <nav>
           <ul>
             <li>
